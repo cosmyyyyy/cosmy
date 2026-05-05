@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>cosmy.baby</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="icon" type="image/png" href="images/avatar.png">
+</head>
+<body>
+
+<main class="container">
+  <div class="content-wrapper">
+
+    <div class="avatar-wrapper fade-in">
+      <div class="avatar">
+        <img src="images/avatar.png" alt="Cosmy">
+      </div>
+    </div>
+
+    <h1 id="scramble-text" class="fade-in">cosmy</h1>
+    <p class="pronouns fade-in">she/her</p>
+
+    <div class="social-icons fade-in" id="social-icons"></div>
+    <div class="info-list fade-in" id="info-list"></div>
+    <div class="link-list fade-in" id="link-list"></div>
+
+  </div>
+</main>
+
+<script>
+/* === Scramble Name === */
+const titleEl = document.getElementById('scramble-text');
+const chars = 'baby✿♡*•';
+const text = 'cosmy';
+let frame = 0;
+const totalFrames = 80;
+
+function scramble() {
+  let output = '';
+  for (let i = 0; i < text.length; i++) {
+    output += Math.random() < frame / totalFrames
+      ? text[i]
+      : chars[Math.floor(Math.random() * chars.length)];
+  }
+  titleEl.textContent = output;
+  frame++;
+  if (frame <= totalFrames) {
+    requestAnimationFrame(scramble);
+  }
+}
+scramble();
+
+/* === Fade-in Transition === */
+window.addEventListener('load', () => {
+  document.querySelectorAll('.fade-in').forEach((el, i) => {
+    setTimeout(() => el.classList.add('visible'), i * 150);
+  });
+});
+
+/* === Data Fetching === */
+
+// Hilfsfunktion um "null" zu filtern
+const filterNull = (str) => (str && str.trim().toLowerCase() === "null") ? "" : str;
+
+// Socials laden
+fetch('socials.txt')
+  .then(res => res.text())
+  .then(data => {
+    const container = document.getElementById('social-icons');
+    const parts = data.split(/\n\s*\n/); 
+    parts.forEach(part => {
+      const lines = part.trim().split('\n');
+      if (lines.length >= 3) {
+        const a = document.createElement('a');
+        a.href = lines[1].trim();
+        a.title = lines[0].trim();
+        a.target = '_blank';
+        a.innerHTML = `<i class="${lines[2].trim()}"></i>`;
+        container.appendChild(a);
+      }
+    });
+  });
+
+// Info Box laden
+fetch('info.txt')
+  .then(res => res.text())
+  .then(data => {
+    const container = document.getElementById('info-list');
+    const lines = data.trim().split('\n');
+    if (lines.length >= 2) {
+      const title = filterNull(lines[0]);
+      const desc = filterNull(lines.slice(1).join(' '));
+      
+      const div = document.createElement('div');
+      div.className = 'link-card info-card';
+      div.innerHTML = `<strong>${title}</strong>${desc ? `<br><span>${desc}</span>` : ''}`;
+      container.appendChild(div);
+    }
+  });
+
+// Project Cards laden (mit "null" Check)
+fetch('cards.txt')
+  .then(res => res.text())
+  .then(data => {
+    const container = document.getElementById('link-list');
+    const parts = data.split(/\n\s*\n/);
+    parts.forEach(part => {
+      const lines = part.trim().split('\n');
+      if (lines.length >= 3) {
+        const title = filterNull(lines[0]);
+        const url = lines[1].trim();
+        const desc = filterNull(lines[2]);
+
+        const a = document.createElement('a');
+        a.className = 'link-card';
+        a.href = url;
+        a.target = '_blank';
+        // Wenn desc "null" war, wird kein <span> gerendert
+        a.innerHTML = `<strong>${title}</strong>${desc ? `<br><span>${desc}</span>` : ''}`;
+        container.appendChild(a);
+      }
+    });
+  });
+</script>
+</body>
+</html>
