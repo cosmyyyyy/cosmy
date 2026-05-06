@@ -4,4 +4,4 @@ null
 
 ✦ cosmo ✦
 https://discord.com/oauth2/authorize?client_id=1500837287171325963
-🌙 High-performance multipurpose bot | Currently in an early testing stage. 🌙
+🌙 High-performance multipurpose bot 🌙
