@@ -3,5 +3,5 @@ https://dsc.gg/jxsttwo
 null
 
 ✦ cosmo ✦
-https://discord.com/oauth2/authorize?client_id=1500837287171325963
+https://cosmy.baby/cosmo/
 🌙 High-performance multipurpose bot 🌙
