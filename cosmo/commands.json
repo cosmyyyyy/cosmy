@@ -1,0 +1,15 @@
+[
+    { "name": "/about", "desc": "about the bot" },
+    { "name": "/avatar", "desc": "view avatar of any user" },
+    { "name": "/banner", "desc": "view banner of any user" },
+    { "name": "/base64", "desc": "encode/decode in base64", "plus": true },
+    { "name": "/button", "desc": "create a button" },
+    { "name": "/coinflip", "desc": "flip a coin" },
+    { "name": "/discord-dsa", "desc": "view DSA violations of any user" },
+    { "name": "/getbotinvite", "desc": "get the invite of any bot" },
+    { "name": "/giveaway", "desc": "start a giveaway" },
+    { "name": "/help", "desc": "show all commands" },
+    { "name": "/invite", "desc": "get the Cosmo bot invite" },
+    { "name": "/me", "desc": "info about yourself" },
+    { "name": "/ping", "desc": "latency" }
+]
