@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmo | Discord Bot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-[#090909] text-white">
+
+    <nav class="flex justify-between items-center px-10 py-8 max-w-7xl mx-auto">
+        <div class="flex items-center gap-3">
+            <img src="cosmo.png" class="w-9 h-9 rounded-xl shadow-lg" alt="Cosmo Logo">
+            <span class="text-2xl font-bold readex tracking-tight">Cosmo</span>
+        </div>
+        <div class="hidden md:flex gap-10 text-zinc-400 text-sm font-medium">
+            <a href="#features" class="hover:text-white transition">Features</a>
+            <a href="#commands" class="hover:text-white transition">Commands</a>
+            <a href="#faq" class="hover:text-white transition">FAQ</a>
+        </div>
+        <button class="btn-primary text-sm px-6 py-2">Add to Discord</button>
+    </nav>
+
+    <section class="flex flex-col items-center text-center py-20 px-6 reveal">
+        <img src="banner.gif" alt="Cosmo Banner" class="w-full max-w-3xl rounded-3xl mb-12 shadow-2xl border border-zinc-900">
+        
+        <div class="px-5 py-1.5 rounded-full border border-zinc-800 text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500 mb-8 bg-zinc-900/30">
+            <span class="text-pink-400 mr-2">●</span> Early Testing Phase
+        </div>
+        
+        <h1 class="text-7xl md:text-8xl font-bold mb-8 tracking-tight readex">Meet <span class="pink-glow-text">Cosmo</span></h1>
+        <p class="text-zinc-400 max-w-2xl mx-auto text-xl leading-relaxed mb-12">
+            Currently in Early Testing — Be one of the first to try out our advanced moderation, leveling, and music systems.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-5">
+            <button class="btn-primary text-lg px-10 py-4">Invite Bot <i class="fa-solid fa-bolt-lightning ml-2 text-sm"></i></button>
+            <button class="btn-outline text-lg px-10 py-4">Join Support Server</button>
+        </div>
+    </section>
+
+    <section id="features" class="max-w-7xl mx-auto px-10 py-24 reveal">
+        <div class="text-center mb-20">
+            <h2 class="text-5xl font-bold mb-5 tracking-tight readex">Everything you need</h2>
+            <p class="text-zinc-500 text-lg">From essential moderation to complex economy systems.</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
+            <div class="feature-card">
+                <div class="w-12 h-12 bg-zinc-900 rounded-xl flex items-center justify-center mb-6 text-[#f0afff]"><i class="fa-solid fa-wrench"></i></div>
+                <h3 class="text-2xl font-bold mb-4 readex">Utility</h3>
+                <p class="text-zinc-500 leading-relaxed text-sm">Helpful tools for everyday use including base64 encoding/decoding, QR code generation and scanning, and custom tags.</p>
+            </div>
+            <div class="feature-card">
+                <div class="w-12 h-12 bg-zinc-900 rounded-xl flex items-center justify-center mb-6 text-[#f0afff]"><i class="fa-solid fa-gamepad"></i></div>
+                <h3 class="text-2xl font-bold mb-4 readex">Fun & Games</h3>
+                <p class="text-zinc-500 leading-relaxed text-sm">Engage with friends using classic games like Tic-Tac-Toe, Rock Paper Scissors, Coinflip, and a fun rating system.</p>
+            </div>
+            <div class="feature-card">
+                <div class="w-12 h-12 bg-zinc-900 rounded-xl flex items-center justify-center mb-6 text-[#f0afff]"><i class="fa-solid fa-user"></i></div>
+                <h3 class="text-2xl font-bold mb-4 readex">User Info</h3>
+                <p class="text-zinc-500 leading-relaxed text-sm">Easily fetch detailed information about any user, including their avatar, banner, and Discord DSA violations.</p>
+            </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div class="feature-card">
+                <div class="w-12 h-12 bg-zinc-900 rounded-xl flex items-center justify-center mb-6 text-[#f0afff]"><i class="fa-solid fa-shield-halved"></i></div>
+                <h3 class="text-2xl font-bold mb-4 readex">Moderation & Server Tools</h3>
+                <p class="text-zinc-500 leading-relaxed text-sm">Manage your community with features like giveaways, custom interactive buttons, and making the bot say messages.</p>
+            </div>
+            <div class="feature-card">
+                <div class="w-12 h-12 bg-zinc-900 rounded-xl flex items-center justify-center mb-6 text-[#f0afff]"><i class="fa-solid fa-robot"></i></div>
+                <h3 class="text-2xl font-bold mb-4 readex">Bot Info</h3>
+                <p class="text-zinc-500 leading-relaxed text-sm">Stay informed with bot latency, about pages, and easily invite Cosmo or check invites for other bots.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="commands" class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center py-24 px-10 reveal">
+        <div>
+            <h2 class="text-5xl font-bold mb-8 tracking-tight readex">Powerful commands at your fingertips</h2>
+            <p class="text-zinc-400 text-lg mb-10 leading-relaxed">Designed for speed and ease of use. All commands support Discord's latest slash command UI with autocomplete.</p>
+            <div class="space-y-5">
+                <div class="flex items-center gap-4 font-semibold text-zinc-200">
+                    <i class="fa-solid fa-chevron-right text-[#f0afff] text-xs"></i> Fast response times
+                </div>
+                <div class="flex items-center gap-4 font-semibold text-zinc-200">
+                    <i class="fa-solid fa-chevron-right text-[#f0afff] text-xs"></i> Slash command native
+                </div>
+                <div class="flex items-center gap-4 font-semibold text-zinc-200">
+                    <i class="fa-solid fa-chevron-right text-[#f0afff] text-xs"></i> 20+ commands built-in
+                </div>
+            </div>
+        </div>
+        <div class="terminal-window overflow-hidden shadow-2xl">
+            <div class="bg-black/40 px-5 py-4 flex items-center gap-2.5 border-b border-white/5">
+                <div class="w-3.5 h-3.5 bg-red-500/40 rounded-full"></div>
+                <div class="w-3.5 h-3.5 bg-yellow-500/40 rounded-full"></div>
+                <div class="w-3.5 h-3.5 bg-green-500/40 rounded-full"></div>
+                <span class="text-[10px] text-zinc-600 ml-2 font-mono italic">bash — 80x24</span>
+            </div>
+            <div id="terminal-content" class="p-8 font-mono text-[13px] space-y-2.5 max-h-[450px] overflow-y-auto">
+                </div>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto py-24 px-10 reveal">
+        <h2 class="text-4xl font-bold text-center mb-16 tracking-tight readex">Meet the Developers</h2>
+        <div class="flex flex-wrap justify-center gap-8">
+            <div class="dev-card">
+                <img src="cosmy.png" alt="Cosmy" class="w-16 h-16 rounded-2xl border-2 border-[#f0afff]/30">
+                <div>
+                    <a href="https://cosmy.baby" target="_blank" class="text-[#f0afff] font-bold text-xl hover:underline readex">@cosmyyyyyy</a>
+                    <p class="text-zinc-500 text-xs mt-1">Lead Developer, Concept Artist</p>
+                </div>
+            </div>
+            <div class="dev-card">
+                <img src="aragasu.png" alt="Aragasu" class="w-16 h-16 rounded-2xl border-2 border-[#f0afff]/30">
+                <div>
+                    <a href="https://aragasu.xyz" target="_blank" class="text-[#f0afff] font-bold text-xl hover:underline readex">@aragasu</a>
+                    <p class="text-zinc-500 text-xs mt-1">Backend Development, Systems Architect and Website Design</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="max-w-4xl mx-auto py-24 px-10 reveal">
+        <h2 class="text-5xl font-bold text-center mb-6 tracking-tight readex">Frequently Asked Questions</h2>
+        <p class="text-center text-zinc-500 mb-16">Everything you need to know about adding the bot to your community.</p>
+        <div class="space-y-4">
+            <div class="faq-item">
+                <span class="font-semibold text-zinc-300">How do I add the bot to my server?</span>
+                <i class="fa-solid fa-chevron-down text-zinc-600 text-xs"></i>
+            </div>
+            <div class="faq-item">
+                <span class="font-semibold text-zinc-300">Is the bot free to use?</span>
+                <i class="fa-solid fa-chevron-down text-zinc-600 text-xs"></i>
+            </div>
+            <div class="faq-item">
+                <span class="font-semibold text-zinc-300">What permissions does it need?</span>
+                <i class="fa-solid fa-chevron-down text-zinc-600 text-xs"></i>
+            </div>
+            <div class="faq-item">
+                <span class="font-semibold text-zinc-300">When will it be out of testing?</span>
+                <i class="fa-solid fa-chevron-down text-zinc-600 text-xs"></i>
+            </div>
+        </div>
+    </section>
+
+    <footer class="max-w-7xl mx-auto px-10 py-20 border-t border-zinc-900 reveal">
+        <div class="grid md:grid-cols-4 gap-16 mb-20">
+            <div class="col-span-1">
+                <div class="flex items-center gap-3 mb-6">
+                    <img src="cosmo.png" class="w-7 h-7 rounded-lg" alt="Logo">
+                    <span class="font-bold text-xl readex">Cosmo</span>
+                </div>
+                <p class="text-zinc-500 text-sm leading-relaxed">
+                    The ultimate multi-purpose bot for your community. Currently in early testing phase.
+                </p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-8 text-sm uppercase tracking-widest text-zinc-300 readex">Product</h4>
+                <div class="flex flex-col gap-4 text-zinc-500 text-sm">
+                    <a href="#features" class="hover:text-white transition">Features</a>
+                    <a href="#commands" class="hover:text-white transition">Commands</a>
+                    <a href="#" class="hover:text-white transition">Pricing</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold mb-8 text-sm uppercase tracking-widest text-zinc-300 readex">Support</h4>
+                <div class="flex flex-col gap-4 text-zinc-500 text-sm">
+                    <a href="#" class="hover:text-white transition">Discord Server</a>
+                    <a href="#faq" class="hover:text-white transition">FAQ</a>
+                    <a href="#" class="hover:text-white transition">Contact</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold mb-8 text-sm uppercase tracking-widest text-zinc-300 readex">Legal</h4>
+                <div class="flex flex-col gap-4 text-zinc-500 text-sm">
+                    <a href="#" class="hover:text-white transition">Terms of Service</a>
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-zinc-900/50">
+            <p class="text-zinc-600 text-[11px] font-medium tracking-wide italic">© 2026 Cosmo. All rights reserved.</p>
+            <div class="flex gap-8 mt-8 md:mt-0">
+                <a href="#" class="text-zinc-600 hover:text-[#f0afff] transition text-xl"><i class="fa-solid fa-circle-nodes"></i></a>
+                <a href="#" class="text-zinc-600 hover:text-[#f0afff] transition text-xl"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="text-zinc-600 hover:text-[#f0afff] transition text-xl"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Reveal Logic (Fade In on Scroll)
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Load Terminal Commands from JSON
+        fetch('commands.json')
+            .then(res => res.json())
+            .then(data => {
+                const container = document.getElementById('terminal-content');
+                container.innerHTML = ''; // Clear initial
+                data.forEach(cmd => {
+                    // Check if it's the plus command for specific color
+                    const colorClass = cmd.plus ? 'plus-cmd' : 'text-white';
+                    container.innerHTML += `
+                        <p>
+                            <span class="text-blue-400">~</span> 
+                            <span class="${colorClass}">${cmd.name}</span> 
+                            <span class="text-zinc-600"># ${cmd.desc}</span>
+                        </p>`;
+                });
+            })
+            .catch(err => console.error("Could not load commands.json", err));
+    </script>
+</body>
+</html>
